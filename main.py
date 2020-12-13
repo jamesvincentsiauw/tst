@@ -12,7 +12,7 @@ mysql = MySQL()
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = ''
 app.config['MYSQL_DATABASE_DB'] = 'yubelajar'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_HOST'] = 'tst_db_nama_1'
 app.config['MYSQL_DATABASE_PORT'] = 3306
 
 mysql.init_app(app)
