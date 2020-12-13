@@ -8,6 +8,7 @@ services:
       - "5000:5000"
   db_nama:
     image: mysql:5.7
+    restart: unless-stopped
     ports:
       - "32000:3306"
     environment:
