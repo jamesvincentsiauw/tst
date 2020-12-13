@@ -1,0 +1,43 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+    <a href="/login">LOGIN</a>
+<!--    <input type="text" placeholder="FIRST NAME" id="first-name">-->
+<!--    <input type="text" placeholder="LAST NAME" id="last-name">-->
+<!--    <input type="text" placeholder="EMAIL" id="email">-->
+<!--    <input type="text" placeholder="BIRTHDATE" id="birthdate">-->
+<!--    <button onclick="submit()">SUBMIT</button>-->
+<!--    <a id="tulisan"></a>-->
+</body>
+<script>
+    function submit() {
+        $.ajax({
+            url: '/create',
+            method: 'get',
+            data: {
+                'first-name': $('#first-name').val(),
+                'last-name': $('#last-name').val(),
+                'email': $('#email').val(),
+                'birthdate': $('#birthdate').val(),
+            },
+            success: function (response) {
+                // [{
+                //     'nama': 'vincent',
+                //     'nim': '18217042'
+                // }]
+                // []
+                // if (response.hasil.length === 0) {
+                //
+                // } else {
+                //
+                // }
+                console.log(response);
+                $('#tulisan').html('DATA BERHASIL DITAMBAH');
+            },
+            error: function (response) {
+                console.log(response)
+            }
+        })
+    }
+</script>
+</html>
