@@ -3,7 +3,7 @@ services:
   app_nama:
     build: .
     links:
-      - db
+      - db_nama
     ports:
       - "5000:5000"
   db_nama:
